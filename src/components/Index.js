@@ -1,9 +1,11 @@
+import styles from "./Index.module.css";
+
 function HelloWorld() {
-    return (
-        <div>
-            <h1>Meu primeiro componente</h1>
+  return (
+      <div className={styles.IContainer}>
+          <h1 className={styles.IContent}>Meu primeiro componente</h1>
     </div>
-)
+  );
 }
 
-export default HelloWorld
+export default HelloWorld;

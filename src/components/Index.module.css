@@ -1,0 +1,10 @@
+.IContainer {
+  background-color: rgb(42, 62, 91);
+  border: 5px solid rgb(159, 159, 159);
+  border-radius: 15px;
+}
+
+.IContent {
+  color: darkorange;
+  margin: 15px;
+}
