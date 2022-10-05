@@ -14,7 +14,7 @@ function Form() {
       <h1>MEU CADASTRO</h1>
       <form onSubmit={Cadastro}>
         <div>
-          <label htmmlFor="name">Nome:</label>
+          <label htmlFor="name">Nome:</label>
           <input
             type="text"
             id="name"
@@ -24,7 +24,7 @@ function Form() {
           />
         </div>
         <div>
-          <label htmmlFor="password">Senha:</label>
+          <label htmlFor="password">Senha:</label>
           <input
             type="password"
             id="password"
