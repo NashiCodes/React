@@ -1,18 +1,23 @@
+import Button from "./Button";
 import { useState } from "react";
 
 function Form() {
   function Cadastro(e) {
     e.preventDefault();
+    setUserEmail(email);
     console.log(`Usuario ${name} foi cadastrado com a senha: ${password}`);
+    console.log(`Seu E-mail cadastrado é: ${userEmail}`);
   }
 
   const [name, setName] = useState();
   const [password, setPassword] = useState();
+  const [email, setEmail] = useState();
+  const [userEmail, setUserEmail] = useState();
 
   return (
     <div>
       <h1>MEU CADASTRO</h1>
-      <form onSubmit={Cadastro}>
+      <form>
         <div>
           <label htmlFor="name">Nome:</label>
           <input
@@ -21,6 +26,16 @@ function Form() {
             name="name"
             placeholder="Digite o seu nome"
             onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+        <div>
+          <label htmlFor="email">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Digite o seu e-mail"
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div>
@@ -35,8 +50,9 @@ function Form() {
         </div>
 
         <div>
-          <input type="submit" value="Cadastrar" />
+          <Button btype="submit" text="Cadastrar" event={Cadastro} />
         </div>
+        {userEmail}
       </form>
     </div>
   );
