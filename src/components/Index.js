@@ -1,15 +1,21 @@
 import styles from "./Index.module.css";
+import Button from "./Button";
 
-function Event({ number }) {
+function Event() {
 
-  function MeuEvento() {
-    console.log(`ESSE BOTÃO FOI ATIVADO ${number}`);
+  function primeiroEvento() {
+    console.log(`ATIVANDO PRIMEIRO EVENTO`);
   }
-  
+
+  function segundoEvento() {
+    console.log(`ATIVANDO SEGUNDO EVENTO`);
+  }
+
   return (
     <div className={styles.IContainer}>
       <h1 className={styles.IContent}>Clique No botão para ativar o Evento</h1>
-      <button onClick={MeuEvento}>Ativar!</button>
+      <Button event={primeiroEvento} text="Primeiro Evento" />
+      <Button event={segundoEvento} text="Segundo Evento" />
     </div>
   );
 }
