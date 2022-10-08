@@ -55,7 +55,7 @@ function Form() {
         <div>
           <Button btype="submit" text="Cadastrar" event={Cadastro} />
         </div>
-        {(userEmail == undefined || userEmail == "") && (
+        {(userEmail === undefined || userEmail === "") && (
           <div>
             <p>Email vazio</p>
           </div>
