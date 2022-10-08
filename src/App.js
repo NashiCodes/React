@@ -1,13 +1,15 @@
 import "./App.css";
-import Lista from "./components/Lista";
+import { useState } from "react";
+import StateLift from "./components/StateLift";
+import Saudacao from "./components/Saudacao";
 
 function App() {
-  const itens = ['REACT', 'ANGULAR', 'VUE', 'JAVASCRIPT', 'C++'];
+  const [nome, setNome] = useState();
   return (
     <div className="App">
-      <h1>RENDERIZAÇÃO DE LISTAS</h1>
-      <Lista itens={itens} />
-      <Lista itens={[]} />
+      <h1>STATE LIFT</h1>
+      <StateLift setNome={setNome} />
+      <Saudacao nome={nome} />
     </div>
   );
 }
