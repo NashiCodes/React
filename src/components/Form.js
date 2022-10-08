@@ -6,7 +6,10 @@ function Form() {
     e.preventDefault();
     setUserEmail(email);
     console.log(`Usuario ${name} foi cadastrado com a senha: ${password}`);
-    console.log(`Seu E-mail cadastrado é: ${userEmail}`);
+    console.log(`Seu E-mail cadastrado é: ${email}`);
+  }
+  function limpar() {
+    setUserEmail("");
   }
 
   const [name, setName] = useState();
@@ -52,7 +55,17 @@ function Form() {
         <div>
           <Button btype="submit" text="Cadastrar" event={Cadastro} />
         </div>
-        {userEmail}
+        {(userEmail == undefined || userEmail == "") && (
+          <div>
+            <p>Email vazio</p>
+          </div>
+        )}
+        {userEmail && (
+          <div>
+            <p>O email do usuario é: {userEmail}</p>
+            <Button text="Limpar Email" event={limpar} />
+          </div>
+        )}
       </form>
     </div>
   );
