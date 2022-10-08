@@ -1,12 +1,13 @@
 import "./App.css";
-import Event from "./components/Index";
-import Form from "./components/Form";
+import Lista from "./components/Lista";
 
 function App() {
+  const itens = ['REACT', 'ANGULAR', 'VUE', 'JAVASCRIPT', 'C++'];
   return (
     <div className="App">
-      <Event number="1" />
-      <Form />
+      <h1>RENDERIZAÇÃO DE LISTAS</h1>
+      <Lista itens={itens} />
+      <Lista itens={[]} />
     </div>
   );
 }
